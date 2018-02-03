@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{{ titre }}</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+  <nav class="blue darken-2" role="navigation">
+
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">{{ titre }}</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="">Etudes</a></li>
+        <li><a href="">Experiences Professionnelles</a></li>
+        <li><a href="">Compétences</a></li>
+        <li><a href="">Projets</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav blue lighten-1">
+        <li><a class="white-text" href="">Etudes</a></li>
+        <li><a class="white-text" href="">Expérience Professionnelles</a></li>
+        <li><a class="white-text" href="">Compétences</a></li>
+        <li><a class="white-text" href="">Projets</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+    {% block corps %}{% endblock %}
+
+    <footer class="page-footer light-blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+
+                    <h5 class="white-text">Site réalisé avec</h5>
+                    <ul>
+                    <li><a class="white-text" target="_blank" href="http://flask.pocoo.org/">Flask</a></li>
+                    <li><a class="white-text" target="_blank" href="http://materializecss.com">Materelized</a></li>
+                    <li><a class="white-text" target="_blank" href="https://jquery.com/">Jquery</a></li>
+                    <li><a class="white-text" target="_blank" href="https://www.raspberrypi.org/downloads/raspbian/">Rasbian</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                  <h5 class="white-text">Plan du site</h5>
+                    <ul>
+                    <li><a class="white-text" href="">Etudes</a></li>
+                    <li><a class="white-text" href="">Expériences Professionnelles</a></li>
+                    <li><a class="white-text" href="">Compétences</a></li>
+                    <li><a class="white-text" href="">Projets</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                  <h5 class="white-text">Contact</h5>
+                  <ul>
+                    <li><a class="white-text" target="_blank" href="https://github.com/ludel">Github</a></li>
+                    <li><a class="white-text" target="_blank" href="https://www.linkedin.com/in/ludovic-delsol-613052145/">Linked</a></li>
+                    <li><a class="white-text" target="_blank" href="#!">Email</a></li>
+                    <li><a class="white-text" target="_blank" href="#!">Téléphone</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+          <div class="container">
+              Site developpé par Ludovic Delsol - Tous droits réservés &copy;
+          </div>
+        </div>
+      </footer>
+
+
+      <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+
+  </body>
+</html>
